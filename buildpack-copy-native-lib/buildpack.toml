@@ -1,0 +1,17 @@
+# Buildpack API version
+api = "0.10"
+
+# Buildpack ID and metadata
+[buildpack]
+id = "fabiofalci/copy_native_build_buildpack"
+version = "0.0.1"
+name = "Copies native libraries to the final image"
+homepage = "https://github.com/jjfood/"
+
+# Targets the buildpack will work with
+[[targets]]
+os = "linux"
+
+# Stacks (deprecated) the buildpack will work with
+[[stacks]]
+id = "*"

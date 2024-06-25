@@ -1,0 +1,33 @@
+description = "Ubuntu 22.04 Jammy Jellyfish base image with buildpacks for Java Native"
+
+[[buildpacks]]
+uri = "docker://gcr.io/paketo-buildpacks/java-native-image:9.6.0"
+version = "9.6.0"
+
+[[buildpacks]]
+uri = "docker://fabiofalci/copy_native_lib_buildpack:0.0.1"
+version = "0.0.1"
+
+[lifecycle]
+version = "0.19.7"
+
+[[order]]
+
+[[order.group]]
+id = "paketo-buildpacks/java-native-image"
+version = "9.6.0"
+
+[[order.group]]
+id = "fabiofalci/copy_native_lib_buildpack"
+version = "0.0.1"
+
+# Base images used to create the builder
+[build]
+image = "docker.io/paketobuildpacks/build-jammy-base:0.1.117"
+[run]
+[[run.images]]
+image = "index.docker.io/paketobuildpacks/run-jammy-base:latest"
+
+[stack]
+id = "io.buildpacks.stacks.jammy"
+run-image-mirrors = []
