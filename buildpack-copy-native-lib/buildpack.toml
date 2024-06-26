@@ -3,10 +3,10 @@ api = "0.10"
 
 # Buildpack ID and metadata
 [buildpack]
-id = "fabiofalci/copy_native_build_buildpack"
+id = "fabiofalci/copy_native_lib_buildpack"
 version = "0.0.1"
 name = "Copies native libraries to the final image"
-homepage = "https://github.com/jjfood/"
+homepage = "https://github.com/fabiofalci/buildpack-copy-native-lib"
 
 # Targets the buildpack will work with
 [[targets]]
