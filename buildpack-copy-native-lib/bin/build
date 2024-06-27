@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+echo "---> Copy native libs buildpack"
+
+cp /layers/paketo-buildpacks_native-image/native-image/*.so /workspace 2>/dev/null || :
+
+echo "Copied:"
+ls /workspace
+
+echo "---> Done"
